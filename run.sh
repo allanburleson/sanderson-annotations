@@ -7,18 +7,18 @@ declare -A TITLES
 URLS[elantris]="http://brandonsanderson.com/annotation-elantris-introduction/"
 TITLES[elantris]="Elantris Annotations"
 URLS[mistborn]="http://www.brandonsanderson.com/annotation-mistborn-title-page-one/"
-TITLES[mistborn]="Mistborn: The Final Empire Annotations"
+TITLES[mistborn]="Mistborn Annotations"
 URLS[mistborn2]="http://brandonsanderson.com/annotation-mistborn-2-title-page/"
-TITLES[mistborn2]="Mistborn: The Well of Ascension Annotations"
+TITLES[mistborn2]="The Well of Ascension Annotations"
 URLS[mistborn3]="http://brandonsanderson.com/annotation-mistborn-3-dedication/"
-TITLES[mistborn3]="Mistborn: The Hero of Ages Annotations"
+TITLES[mistborn3]="The Hero of Ages Annotations"
 URLS[warbreaker]="http://brandonsanderson.com/annotation-warbreaker-dedication/"
 TITLES[warbreaker]="Warbreaker Annotations"
 URLS[alcatraz]="http://brandonsanderson.com/annotation-alcatraz-authors-foreword/"
 TITLES[alcatraz]="Alcatraz vs. the Evil Librarians Annotations"
 # for some reason, chapter 1 of Alloy is not available
 URLS[alloy]="http://brandonsanderson.com/annotation-the-alloy-of-law-chapter-two/"
-TITLES[alloy]="Mistborn: The Alloy of Law Annotations"
+TITLES[alloy]="The Alloy of Law Annotations"
 
 # need to check if requirements are satisfied
 #   better to fail now than later
