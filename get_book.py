@@ -28,20 +28,20 @@ class Annotation(data.Annotation):
             print("Error: Could not find dropdown menu at url '" + str(self.url) + "'")
             sys.exit(1)
 
-    # get the individual links
-    urls = [option.get("value") for option in res.find_all("option")]
-
-    # parse out chapters
-    chap_num = 1
-    for chapter_url in urls:
-        if chapter_url == '':
-            continue
-        self.chapters.append(Chapter(chapter_url, chap_num))
-        chap_num += 1
-
-    # actually load the test for each chapter
-    for chapter in self.chapters:
-        chapter.load()
+        # get the individual links
+        urls = [option.get("value") for option in res.find_all("option")]
+    
+        # parse out chapters
+        chap_num = 1
+        for chapter_url in urls:
+            if chapter_url == '':
+                continue
+            self.chapters.append(Chapter(chapter_url, chap_num))
+            chap_num += 1
+    
+        # actually load the test for each chapter
+        for chapter in self.chapters:
+            chapter.load()
 
     def save(self, dirname):
         # generate data
@@ -52,16 +52,16 @@ class Annotation(data.Annotation):
         'chapters': [],
         }
 
-    for chapter in self.chapters:
-        chap_data = chapter.save(dirname)
-        data['chapters'].append(chap_data)
-
-    # write data
-    f = open(self.filename(dirname), 'w')
-    json.dump(data, f)
-    f.close()
-
-    return data
+        for chapter in self.chapters:
+            chap_data = chapter.save(dirname)
+            data['chapters'].append(chap_data)
+    
+        # write data
+        f = open(self.filename(dirname), 'w')
+        json.dump(data, f)
+        f.close()
+    
+        return data
 
 class Chapter(data.Chapter):
     def __init__(self, url, number):
